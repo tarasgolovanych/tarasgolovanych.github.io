@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery SimpleParallax Plugin Examples</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+body {
+  color: #535353;
+  font-weight: 400;
+  font-family: 'roboto', sans-serif;
+}
+
+header {
+  text-align: center;
+  background-color: #f1f2f3;
+  padding: 4em 0;
+}
+
+header h1 { margin: 0; }
+
+.container { max-width: 800px; }
+
+p { font-size: 1.5rem; }
+
+h1 { font-weight: 300; }
+
+h2 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -webkit-transition: background-position .2s ease-in;
+  -moz-transition: background-position .2s ease-in;
+  -o-transition: background-position .2s ease-in;
+  transition: background-position .2s ease-in;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.parallax .parallax-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  color: #eee;
+}
+
+.parallax h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#two { background-image: url("https://unsplash.it/2800/2560?image=974"); }
+
+#four { background-image: url("https://unsplash.it/1800/1660?image=990"); }
+
+#footer { background-image: url("https://unsplash.it/1800/1660?image=976"); }
+
+.sections, .parallax-container { padding: 16em 0; }
+
+.no-padding { padding: 2em 0; }
+
+.white-section { background-color: #fff; }
+
+.silver-section { background-color: #f1f2f3; }
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <h1>jQuery SimpleParallax Plugin Examples</h1>
+    <div class="jquery-script-ads" align="center" style="margin:30px auto;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+  </div>
+</header>
+<section id="one" class="sections white-section">
+  <div class="container text-center">
+    <h2>Section One</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper aliquet efficitur. Proin laoreet pharetra mauris vitae tempus. Morbi fermentum nunc diam, rutrum tristique elit interdum eu. Donec id libero in erat mollis placerat. Phasellus condimentum interdum tristique. Nam rutrum risus arcu, at placerat ex finibus sit amet. Aenean sagittis orci vel diam interdum, in aliquam sem tempus. Cras ac erat non augue egestas molestie et in lorem. Vivamus non cursus justo.</p>
+  </div>
+</section>
+<section id="two" class="sections parallax" data-parallax-speed="5">
+  <div class="parallax-container text-center">
+    <h2>Scrolling Speed: 5</h2>
+  </div>
+</section>
+<section id="three" class="sections white-section">
+  <div class="container text-center">
+    <h2>Section Three</h2>
+    <p>Donec sit amet tristique magna. Sed et pharetra tellus. Fusce ligula tellus, cursus nec est vitae, egestas tincidunt ex. Proin vitae tellus in risus pretium malesuada elementum sed lorem. Donec nunc odio, lacinia a ligula id, aliquam pulvinar sem. Vivamus ut dictum libero. Curabitur tempus velit metus, in consequat dolor fringilla eu. Proin mauris mauris, lobortis quis sollicitudin euismod, iaculis sed est. Vivamus sapien mi, congue sed tortor sit amet, faucibus venenatis ipsum.</p>
+  </div>
+</section>
+<section id="four" class="sections parallax">
+  <div class="parallax-container text-center">
+    <h2>Section Four</h2>
+  </div>
+</section>
+<section id="five" class="sections white-section">
+  <div class="container text-center">
+    <h2>Section Five</h2>
+    <p>Duis vitae libero vitae magna elementum cursus sed ut urna. Phasellus vitae ligula condimentum diam condimentum elementum. Praesent et gravida purus, vitae vestibulum est. Aenean sed lorem id tellus vestibulum faucibus a vel urna. Etiam ultrices in arcu non porttitor. Suspendisse porta aliquet erat quis ullamcorper. Phasellus vel metus orci. Duis rhoncus nisl vel enim iaculis, sit amet ultrices metus egestas. In at ipsum et dui tempus pulvinar eu nec sem. Aenean in eleifend mi, a dignissim nunc. Vestibulum ac nunc ut tortor facilisis molestie ut accumsan leo. Sed fermentum auctor elit, ut molestie quam scelerisque vel.</p>
+  </div>
+</section>
+<footer id="footer" class="sections parallax text-center" data-parallax-speed="10">
+  <div class="parallax-container">
+    <p>I'm footer :)</p>
+  </div>
+</footer>
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script> 
+<script src="simple.parallax.js"></script> 
+<script>
+
+(function($){'use strict';$(document).ready(function(){$('.parallax').sparallax();});})(jQuery);
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

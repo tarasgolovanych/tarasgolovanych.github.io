@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>RO Games</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="jquery.bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>  
+	<script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+	<script src="Smooth-Parallax-Scrolling-Effect-With-jQuery-and-CSS3-SimpleParallax/simple.parallax.js"></script>
+	<script src="js/shadow.js"></script>
+
+	
+	
+	
+	
+
+		<script >
+			$(document).ready(function() {
+				$('.leftIcons').hover(function() {
+					
+					$(this).stop().animate({
+						left:'0',
+					},
+					500,
+					'easeInQuad'
+					).addClass('fullGradient');//end 0f first animate
+				},
+				function() {
+					$(this).stop().animate({
+						left: '-17px'	
+					},600,
+					'easeOutBounce'
+					).removeClass('fullGradient');//end of two animate
+				});//end of mouse hover  ( Показати і сховати панель соціальних мереж )
+
+
+
+			$('.leftIcons a, .bxslider a').attr('target','_blank'); //  open new window for leftIcons, ref on play market
+
+			var $header = $('.headerRow');
+
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 200 ) {
+					$header.css({
+						'background-color' : 'rgba(255,250,250, .95)'
+					});
+					 
+				} else if ($(this).scrollTop() < 200){
+					$header.css({
+						background : 'rgba(255,250,250, .4)'
+					});
+				}; //end of if-else	
+
+				});
+				// end of scroll 
+		    
+
+			$('.bxslider').bxSlider({   // слайдер
+				auto: true,
+				pause: 5000	,
+				autoHover: true
+			});
+
+			$('.parallax').sparallax();  // паралакс скролл
+	
+			$('#smallScreen a').click(function(evt) {
+				evt.preventDefault();
+				var imgAttr = $(this).attr('href'); 
+				var oldScreen = $('#fullScreen img');
+				var newScreen = $('<img src="'+ imgAttr + '">');
+				newScreen.hide();
+				$('#fullScreen').prepend(newScreen);
+				newScreen.fadeIn(600);
+				oldScreen.remove();
+			});
+			$('#smallScreen a:first').click();
+
+                     
+
+	});  //end of ready
+		</script>
+	
+</head>
+<body class="parallax bgOtherPage" data-parallax-speed="3">
+	
+		<header class="headerRowPage">
+			<h1 class="logo">logo</h1>
+			<nav>
+				<ul class="mainnav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="games.html">Games</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="developers.html">Developers</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	
+		
+		<section class="container">
+			<div class="mainGallery">	
+				
+				<div id="smallScreen">
+					<a href="img/screen/bt1.png"><img src="img/screen/bt1sm.png"></a><!--
+					--><a href="img/screen/bt22.png"><img src="img/screen/bt22sm.png"></a><!--
+					--><a href="img/screen/bt1.png"><img src="img/screen/bt1sm.png"></a><!--
+					--><a href="img/screen/bt22.png"><img src="img/screen/bt22sm.png"></a>
+				</div>
+
+				<div id="fullScreen">
+					
+				</div>
+				<a href="https://play.google.com/store/apps/details?id=com.ROGame.BallTransformer" class="playMarket">
+					  		<img src="img/google-play.png" alt="google-play">
+				</a>
+				<h1>Ball Transformer </h1>
+				<p>Ласкаво просимо у гру - Ball Transformer. Ця гра поєднує в собі елементи аркади і головоломки.
+				Основна мета гри полягає в тому, щоб пройти всі рівні і досягти максимальної кількості балів. В міру проходження рівнів впроваджуються різноманітна кількість перешкод. М'яч має унікальну здатність змінювати матеріал і фізичні характеристики, перетворюючись в дерев'яний, металевий або паперовий. Тим не менш, перетворення обмежене, так що використовуйте його мудро.
+				Ball Transformer розвиває логічне мислення та уяву.
+				</p>
+				
+				
+				<ul>
+					<li>Необмежений ігровий час із збільшенням рівня складності</li>
+					<li>Красивий дизайн</li>
+					<li> Підтримка 30 рівнів</li>
+					<li>Рівні розділені між літом і зимою</li>
+				</ul>
+		
+
+			</div>	
+
+
+		</section>
+	
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	<div class="footerRowPage">
+		<footer class="container">
+			<nav>
+				<ul class="footerNav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="games.html">Games</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="developers.html">Developers</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<p>RO Games 2017 &#0169;  All rights reserved </p>
+			<p>Ukraine,Lviv</p>
+
+			<div class="leftIcons" >
+				<span class="social">We in social networks</span><!--
+				--><a href="https://www.facebook.com/"><img src="img/facebook.png" alt="facebook"></a><!--
+				--><a href="#"><img src="img/vkontakte.png" alt="vkontakte"></a><!--
+				--><a href="#"><img src="img/twitter.png" alt="twitter"></a><!--
+				--><a href="#"><img src="img/google.png" alt="google"></a><!--
+				--><a href="#"><img src="img/youtube.png" alt="youtube"></a>
+			</div>
+			<p class="created">Webcite created by Taras Holovanych</p>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+					
+				

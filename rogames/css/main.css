@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* reset styles */
+* { box-sizing: border-box; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1.2; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+ol { padding-left: 1.4em; list-style: decimal; }
+
+ul { padding-left: 1.4em; list-style: square; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+/* end reset styles */
+/* ================== clearfix   ====================*/
+.group::before .group::after { content: ""; display: table; }
+
+.group ::after { clear: both; }
+
+.group { clear: both; *zoom: 1; }
+
+/* SASS variables */
+/*===================
+user stiles
+=====================*/
+@font-face { font-family: 'Good Dog'; src: url("../fonts/GoodDog.otf"); }
+html { font-size: 62.5%; font-family: "Roboto", sans-serif, Arial, Verdana; color: white; font-weight: 400; position: relative; }
+
+.container { max-width: 960px; margin: 0 auto; }
+
+/*============================= background styles section  main page ===============================*/
+#section-two { background-image: url("../img/dark_mosaic.png"); box-shadow: inset 0 10px 100px 20px black; }
+#section-two p { text-align: center; font-size: 2.4rem; padding-top: 100px; line-height: 200%; word-spacing: 3px; }
+
+#section-three { background-image: url("../img/ep_naturalblack.png"); box-shadow: inset 0 0 100px 20px black; }
+#section-three p { font-size: 2.4rem; line-height: 140%; padding: 20px 0; text-align: center; }
+
+#section-four, .footerRowPage { /* ╨в╤Ц ╨╢ ╤Б╨░╨╝╤Ц ╤Б╤В╨╕╨╗╤Ц ╨┤╨╗╤П footer ╤Ц ╨╜╨░ ╤Ц╨╜╤И╨╕╤Е ╤Б╤В╨╛╤А╤Ц╨╜╨║╨░╤Е*/ background-image: url("../img/dark_mosaic.png"); }
+#section-four p, .footerRowPage p { padding: 20px 20px; text-align: center; font-family: "Good Dog", serif, Georgia, Times; font-size: 2.8rem; }
+#section-four p.created, .footerRowPage p.created { font-size: 1.6rem; }
+
+/*========================= for other page
+=========================*/
+.headerRowPage { position: static; background-color: snow; height: auto; box-shadow: 0 10px 100px 20px black; overflow: hidden; }
+
+.footerRowPage { box-shadow: 0 -10px 100px 20px black; }
+
+.bgOtherPage { background-image: url("../img/ep_naturalblack.png"); }
+
+.footerNav { list-style-type: none; }
+.footerNav li { width: 20%; float: left; display: block; }
+.footerNav a { display: block; margin: 10px 20px; padding: 10px 0; text-decoration: none; font-size: 2.6rem; color: white; text-align: center; font-family: "Good Dog", serif, Georgia, Times; letter-spacing: 3px; }
+.footerNav a:hover { box-shadow: 0px 0px 10px indigo; }
+
+/*================= header styles    ================*/
+.headerRow { background: rgba(255, 250, 250, 0.4); position: fixed; left: 0; right: 0; top: 0; z-index: 1000; }
+
+.logo { font-size: 4.4rem; color: black; display: inline-block; letter-spacing: 5px; text-transform: uppercase; margin-left: 10%; margin-top: 10px; margin-bottom: 10px; vertical-align: top; }
+
+header nav { display: inline-block; float: right; margin-right: 10%; }
+
+.mainnav { padding: 0; list-style-type: none; }
+.mainnav li { width: auto; float: left; }
+.mainnav a { display: block; text-decoration: none; font-size: 2.6rem; color: black; text-align: center; padding: 16px 24px; margin: 5px 0; font-family: "Good Dog", serif, Georgia, Times; letter-spacing: 3px; }
+.mainnav a:hover { background: url("../img/underline.png") no-repeat 30% 95%; background-size: 100% 20%; -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
+
+/*================= slider styles    ================ */
+.bxslider a { position: absolute; left: 38%; right: 38%; bottom: 20%; box-shadow: 0 0 25px black; border-radius: 15px; }
+.bxslider a:hover { box-shadow: 0 0 45px black; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+
+.bxslider :nth-child(3) a { bottom: 67%; }
+
+.bxslider :nth-child(4) a { bottom: 16%; left: 36%; right: 40%; }
+
+/*================ game list page ==================*/
+.articleList img { float: left; width: 30%; border-radius: 50%; margin: 25px 5px 10px 5px; border: 7px solid indigo; }
+.articleList div { border: 3px solid indigo; clear: both; overflow: hidden; border-radius: 10px; padding: 20px 20px; margin: 30px 10px; background: url("../img/background.png") no-repeat 0px -600px; box-shadow: 0 0 35px indigo; position: relative; }
+.articleList h1 { font-size: 2.8rem; font-family: "Good Dog", serif, Georgia, Times; color: black; text-transform: uppercase; letter-spacing: 4px; border: 3px solid indigo; border-radius: 5px; width: 30%; text-align: center; padding: 10px 5px; }
+.articleList .readMore { font-size: 3.2rem; font-family: "Good Dog", serif, Georgia, Times; letter-spacing: 3px; position: absolute; padding: 0; bottom: 5%; right: 10%; }
+.articleList p { padding: 20px 30px 40px 30px; font-size: 2.4rem; overflow: hidden; text-align: center; line-height: 160%; }
+.articleList a { text-decoration: none; color: black; }
+
+/*================ screen gallery page ==================*/
+.mainGallery { background-color: #2a9eff; background: -webkit-linear-gradient(top left, rgba(42, 158, 255, 0.8), white); background: linear-gradient(to bottom right, rgba(42, 158, 255, 0.8), white); margin: 20px 0 50px 0; border-radius: 10px; border: 3px solid indigo; box-shadow: 0 0 35px indigo; color: black; min-height: 1000px; }
+.mainGallery #smallScreen a { display: inline-block; width: 25%; padding: 10px; }
+.mainGallery #smallScreen img { max-width: 100%; border-radius: 10px; border: 1px solid indigo; }
+.mainGallery #smallScreen img:hover { box-shadow: 0 0 35px indigo; }
+.mainGallery #fullScreen { margin: 30px 50px; max-width: 100%; }
+.mainGallery #fullScreen img { width: 100%; border: 3px solid indigo; border-radius: 15px; }
+.mainGallery h1 { font-size: 6rem; font-family: "Good Dog", serif, Georgia, Times; text-align: center; letter-spacing: 5px; }
+.mainGallery p { font-size: 2.2rem; padding: 20px 40px; text-indent: 40px; line-height: 140%; text-align: justify; }
+.mainGallery ul { list-style-type: none; font-size: 2.2rem; margin-left: 10%; }
+.mainGallery ul li { background: url("../img/list.png") no-repeat left center; padding-left: 80px; margin: 10px 0; font-style: italic; }
+.mainGallery .playMarket img { width: 40%; display: block; margin: 0 auto; padding: 0; }
+.mainGallery .playMarket img:hover { box-shadow: 0 0 35px indigo; border-radius: 15px; }
+.mainGallery iframe { display: block; margin: 30px auto; box-shadow: 0 0 35px indigo; width: 80%; height: 500px; }
+.mainGallery .contacts { color: white; margin: 30px; }
+
+/*================ news page ==================*/
+.news { padding: 20px; margin: 40px; border: 1px solid indigo; border-radius: 15px; position: relative; }
+.news img { max-width: 50%; float: left; margin: 10px 20px; border: 3px solid indigo; border-radius: 15px; }
+.news h1 { font-size: 3.2rem; padding: 20px 30px; }
+.news p { margin-bottom: 20px; }
+.news .date { position: absolute; bottom: 0; right: 0; width: 200px; height: 40px; font-size: 2rem; text-align: center; padding: 10px 20px; background-color: #ffe4ff; border-radius: 0 0 15px 0; }
+
+/*==================
+developers styles
+===================*/
+.developers { margin: 40px; border: 1px solid indigo; border-radius: 15px; box-shadow: 0 0 30px 3px indigo; }
+.developers figure { width: 30%; float: left; margin: 20px 40px 20px 40px; }
+.developers figure img { max-width: 100%; border-radius: 50%; }
+.developers figcaption { text-align: center; display: block; font-size: 3rem; font-family: "Good Dog", serif, Georgia, Times; margin-top: 20px; }
+.developers p { margin: 20px; }
+
+/*================ leftIcons styles  ==================*/
+.social { display: none; }
+
+.leftIcons { position: fixed; left: -15px; top: 30%; height: 290px; width: 65px; background: -webkit-linear-gradient(left, rgba(0, 100, 0, 0.3), darkgreen); background: linear-gradient(to right, rgba(0, 100, 0, 0.3), darkgreen); border-radius: 0 20px 20px 0; z-index: 1000; }
+.leftIcons img { display: inline-block; width: 40px; margin: 5px 5px 5px 20px; border-radius: 3px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); }
+.leftIcons img:hover { box-shadow: -1.5px -1.5px 2px rgba(0, 0, 0, 0.5); }
+.leftIcons a:first-of-type img { margin-top: 20px; }
+
+.fullGradient { background-color: green; background: -webkit-linear-gradient(left, rgba(0, 100, 0, 0.5), darkgreen); background: linear-gradient(to right, rgba(0, 100, 0, 0.5), darkgreen); }
+
+.parallax { -webkit-transition: background-position .2s ease-in; transition: background-position .2s ease-in; }
+
+/*==================
+media styles
+===================*/
+@media (min-width: 926px) and (max-width: 1200px) { .container { max-width: 760px; }
+  header nav { margin-right: 5%; }
+  .articleList p { padding: 0px 20px 20px 20px; margin-top: -35px; }
+  .footerNav a { margin: 10px 0; } }
+@media (min-width: 769px) and (max-width: 925px) { .container { max-width: 620px; }
+  html { font-size: 50%; }
+  header nav { margin-right: 5%; }
+  .mainnav a { padding: 17px 15px; }
+  .articleList p { padding: 0px 20px 20px 20px; margin-top: -35px; }
+  .news img { max-width: 100%; float: none; display: block; margin: 0 auto; }
+  .news h1 { padding-bottom: 0px; }
+  .mainGallery #smallScreen a { padding: 5px; }
+  .footerNav a { margin: 10px 0; } }
+@media (max-width: 768px) { .container { width: 100%; }
+  html { font-size: 45%; }
+  .headerRow { position: static; background: url("../img/ep_naturalblack.png"); }
+  .headerRowPage { background: url("../img/ep_naturalblack.png"); }
+  .logo { display: block; margin: 0; text-align: center; color: white; }
+  header nav { float: none; margin: 0; width: 100%; }
+  .mainnav { width: 90%; margin: 0 auto; }
+  .mainnav li { width: 33.33%; }
+  .mainnav li:nth-of-type(n+4) { width: 50%; }
+  .mainnav a { background-color: rgba(60, 173, 255, 0.3); border: 1px solid indigo; border-radius: 3px; padding: 10px; margin: 5px 10px; box-shadow: 0 0 3px 3px indigo; color: white; }
+  .mainnav a:hover { background: none; background-color: rgba(60, 173, 255, 0.5); -webkit-transform: none; -ms-transform: none; transform: none; box-shadow: 0 0 5px 5px indigo; }
+  .mainnav a:active { background-color: rgba(60, 173, 255, 0.5); background: none; -webkit-transform: none; -ms-transform: none; transform: none; box-shadow: 0 0 7px 7px indigo; }
+  .bxslider a { left: 28%; right: 28%; bottom: 5%; box-shadow: 0 0 25px black; border-radius: 15px; }
+  .bxslider :nth-child(3) a { bottom: 67%; }
+  .bxslider :nth-child(4) a { bottom: 16%; left: 10%; right: 45%; }
+  p { padding-left: 20px; padding-right: 20px; }
+  .leftIcons { position: static; height: 100px; width: 80%; margin: 0 auto; background: none; border: 3px dashed indigo; border-radius: 20px; z-index: 1000; }
+  .leftIcons .social { display: block; font-size: 3rem; font-family: "Good Dog", serif, Georgia, Times; text-align: center; letter-spacing: 3px; }
+  .leftIcons a { display: inline-block; vertical-align: top; width: 20%; margin-top: 8px; }
+  .leftIcons img { display: block; margin: 0 auto; border-radius: 3px; box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.7); }
+  .leftIcons img:active, .leftIcons img:hover { box-shadow: 0px 0px 15px 5px indigo; }
+  .leftIcons a:first-of-type img { margin-top: 0; }
+  .news img { max-width: 100%; float: none; display: block; margin: 0 auto; }
+  .news h1 { padding-bottom: 0px; }
+  .fullGradient { background-color: none; }
+  .footerNav a { padding: 10px 0; text-decoration: none; font-size: 2.2rem; letter-spacing: 3px; box-shadow: 0px 0px 10px indigo; border-radius: 5px; }
+  .footerNav a:hover, .footerNav a:active { box-shadow: 0px 0px 20px indigo; }
+  .mainGallery #smallScreen a { padding: 5px 2px 5px 2px; }
+  .mainGallery iframe { width: 95%; height: 350px; }
+  .mainGallery .contacts { text-align: left; margin: 0; padding: 15px 20px; }
+  .articleList img { float: none; max-width: 100%; border-radius: 5px; border: 3px solid indigo; display: block; margin: 10px auto; box-shadow: 0 0 25px 10px indigo; }
+  .articleList h1 { text-align: center; display: block; border-radius: 5px; width: 100%; box-shadow: 0 0 25px 5px indigo; }
+  .developers { margin: 40px 20px; }
+  .developers figure { width: 100%; margin: 0px; }
+  .developers figure img { max-width: 100%; border-radius: 50%; display: block; margin: 10px auto; }
+  .developers figcaption { margin-top: 30px; margin-bottom: 20px; font-size: 4rem; }
+  .developers p { margin: 20px; }
+  .footerNav a { margin: 10px 0; } }
+@media (max-width: 480px) { .mainnav a { margin: 5px; }
+  .bxslider a { position: absolute; left: 18%; right: 18%; bottom: -7%; box-shadow: none; }
+  .bxslider a:active { box-shadow: 0 0 45px black; border-radius: 15px; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+  .bxslider :nth-child(3) a { bottom: 63%; }
+  .bxslider :nth-child(4) a { bottom: -7%; left: 0%; right: 40%; }
+  .leftIcons { width: 100%; }
+  .news { padding: 0px; margin: 0px; border: none; border-bottom: 3px solid indigo; }
+  .news img { margin-top: 10px; }
+  .news p { margin-bottom: 40px; }
+  .footerNav li { width: 33.33%; }
+  .footerNav li:nth-of-type(n+4) { width: 50%; }
+  .mainGallery #smallScreen a { display: inline-block; width: 50%; padding: 5px; }
+  .mainGallery #fullScreen { margin: 5px; max-width: 100%; }
+  .mainGallery #fullScreen img { width: 100%; }
+  .mainGallery h1 { font-size: 5rem; }
+  .mainGallery p { padding: 10px; }
+  .mainGallery .playMarket img { width: 80%; }
+  .mainGallery .playMarket img:active { box-shadow: 0 0 35px indigo; border-radius: 15px; }
+  .mainGallery .contacts { text-align: left; text-indent: 15px; margin: 0; padding: 5px 3px; }
+  .mainGallery iframe { height: 300px; }
+  .developers { margin: 10px; }
+  .developers figure img { max-width: 90%; }
+  .articleList p { padding: 0 0 30px 0; }
+  .articleList img { width: 150px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,960 @@
+/* reset styles */
+* { box-sizing: border-box; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* end reset styles */
+
+/* ==================
+ clearfix  
+ ====================*/
+
+.group::before
+.group::after {
+  content: "";
+  display: table;
+}
+.group ::after{
+  clear: both;
+}
+
+.group{
+  clear: both;
+  *zoom: 1 ;
+}
+
+
+/* SASS variables */
+$mainFont : 'Roboto', sans-serif, Arial, Verdana;
+$writtenFont : 'Good Dog',serif, Georgia, Times;
+$bgStar: url("../img/ep_naturalblack.png");
+$bgMosaic: url("../img/dark_mosaic.png");
+$shadow: rgb(75,0,130);
+
+/*===================
+user stiles
+=====================*/
+@font-face{
+	font-family: 'Good Dog';
+	src: url('../fonts/GoodDog.otf')
+}
+html{
+	font-size: 62.5%;
+	font-family: $mainFont;
+	color: white;
+	font-weight: 400;
+	position: relative;
+
+}
+
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	
+}
+
+
+/*=============================
+ background styles section  main page
+ ===============================*/
+
+#section-one { 
+  
+}
+
+#section-two { 
+  background-image: $bgMosaic;
+  
+  box-shadow: inset 0 10px 100px 20px black;
+	p{
+		text-align: center;
+		font-size: 2.4rem;
+		padding-top: 100px;
+		line-height: 200%;
+		word-spacing: 3px;
+	}   
+ 
+}
+
+#section-three { 
+  background-image:$bgStar;
+  box-shadow: inset 0 0 100px 20px black;
+  p{
+	font-size: 2.4rem;
+	line-height: 140%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+}
+
+#section-four,
+.footerRowPage {           /* Ті ж самі стилі для footer і на інших сторінках*/
+	background-image: $bgMosaic ;
+	p{
+		padding:20px 20px;
+		text-align: center;
+		font-family: $writtenFont;
+		font-size: 2.8rem;
+		&.created{
+			font-size: 1.6rem;
+
+		}
+	}		
+}
+
+
+
+/*=========================
+  for other page
+=========================*/
+.headerRowPage {
+	position: static;
+	background-color: rgb(255,250,250);
+	height: auto;
+	box-shadow: 0 10px 100px 20px black;
+	overflow: hidden;
+}
+.footerRowPage{
+	box-shadow: 0 -10px 100px 20px black;
+}
+.bgOtherPage{
+	background-image: $bgStar;
+	}
+
+.footerNav{                   
+	
+
+	list-style-type: none;
+	li{
+		width: 20%;
+		float: left;
+		display: block;
+		
+
+	}
+	a{
+		display:block;
+		margin: 10px 20px;
+		padding:10px 0;
+		text-decoration: none;
+		font-size: 2.6rem;
+		color: white;
+		text-align: center;
+		font-family: $writtenFont;
+		letter-spacing: 3px;
+		&:hover{
+			box-shadow: 0px 0px 10px  $shadow;
+		}
+	}
+}
+
+
+
+
+/*=================
+   header styles   
+   ================*/
+.headerRow{
+	background: rgba(255,250,250, .4);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top:0;
+	z-index: 1000;
+}
+
+.logo{
+	font-size: 4.4rem;
+	color: black;
+	display: inline-block;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin-left: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	
+}
+header nav{
+	display: inline-block;
+	float: right;
+	margin-right: 10%;
+
+}
+.mainnav{
+	
+	padding: 0;
+	list-style-type: none;
+
+	
+	li{
+		width: auto;
+		float: left;
+		
+	}
+	
+	a{
+		display:block;
+		text-decoration: none;
+		font-size: 2.6rem;
+		color: black;
+		text-align: center;
+		padding: 16px 24px;
+		margin: 5px 0;
+		font-family: $writtenFont;
+		letter-spacing: 3px;
+		&:hover{
+			
+			background: url("../img/underline.png") no-repeat 30% 95%;
+			background-size: 100% 20%;
+			transform:scale(1.1)
+
+		}
+		
+	}
+}
+/*=================
+   slider styles   
+  ================ */
+
+
+
+.bxslider a {
+	position: absolute;
+	left: 38%;
+	right: 38%;
+	bottom: 20%;
+	box-shadow: 0 0 25px black;
+	border-radius:15px;
+
+
+	&:hover{
+		box-shadow: 0 0 45px black;
+		transform: scale(1.05)
+	}
+}
+.bxslider :nth-child(3) a {	
+	bottom: 67%;
+}
+
+
+.bxslider :nth-child(4) a {	
+	bottom: 16%;
+	left: 36%;
+	right: 40%;
+}
+
+/*================
+   game list page
+ ==================*/
+.articleList {    
+	  
+	img{
+		float: left;
+		width: 30%;
+		border-radius: 50%;
+		margin: 25px 5px 10px 5px;
+		border: 7px solid $shadow;
+
+		
+	}
+
+	div{
+		border : 3px solid $shadow;
+		clear: both;
+		overflow: hidden;
+		border-radius: 10px;
+		padding: 20px 20px;
+		margin: 30px 10px;
+		background: url('../img/background.png') no-repeat 0px -600px ;
+		box-shadow: 0 0 35px $shadow;
+		position: relative;
+
+	}
+
+	 h1{
+		font-size: 2.8rem;
+		font-family: $writtenFont;
+		color: black;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		border:3px solid $shadow;
+		border-radius: 5px;
+		width:30%;
+		text-align: center;
+		padding: 10px 5px;
+ 	}
+	.readMore{
+		font-size: 3.2rem;
+		font-family: $writtenFont;
+		letter-spacing: 3px;
+		position: absolute;
+		padding:0;
+		bottom:5%;
+		right: 10%;
+	}
+	p{
+		padding: 20px 30px 40px 30px;
+		font-size: 2.4rem;
+		overflow: hidden;
+		text-align: center;
+		line-height: 160%;
+
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	
+}
+/*================
+   screen gallery page
+ ==================*/
+.mainGallery{         //  стиль і для решти сторінок сайту
+	background-color:rgb(42,158,255);
+	background: linear-gradient(to bottom right,rgba(42,158,255, .8), rgb(255,255,255));
+	margin: 20px 0 50px 0;
+	border-radius: 10px;
+	border: 3px solid $shadow; 
+	box-shadow: 0 0 35px $shadow;
+	color: black;
+	min-height: 1000px;
+	
+	#smallScreen a {
+		display: inline-block;
+		width: 25%;
+		padding:10px;
+	}
+	#smallScreen img{
+		max-width: 100%;
+		border-radius: 10px;
+		border: 1px solid $shadow;
+		&:hover{
+			box-shadow: 0 0 35px $shadow;
+		}
+	}
+
+	#fullScreen{  
+
+		margin: 30px 50px;
+		max-width: 100%;				
+	}
+	#fullScreen img{
+		width: 100%;
+		border: 3px solid $shadow;
+		border-radius: 15px;
+	}
+	h1{
+		font-size: 6rem;
+		font-family: $writtenFont;
+		text-align: center;
+		letter-spacing: 5px;
+	}
+	p{
+		font-size: 2.2rem;
+		padding: 20px 40px;
+		text-indent: 40px;
+		line-height: 140%;
+		text-align: justify;
+		
+	}
+	ul{
+		list-style-type: none;
+		font-size: 2.2rem;
+		margin-left: 10%;
+		li{
+			background: url('../img/list.png') no-repeat left center ;
+			padding-left: 80px;
+			margin: 10px 0;	
+			font-style: italic;
+		}
+	}
+	.playMarket img {
+		width:40%;
+		display: block;
+		margin: 0 auto;			
+		padding: 0;
+		
+		&:hover{
+			box-shadow: 0 0 35px $shadow;
+			border-radius:15px;
+
+			
+		}
+		
+	}
+	iframe{
+		display: block;
+		margin: 30px auto;
+		box-shadow: 0 0 35px $shadow;
+		width: 80%;
+		height: 500px;
+	}
+	.contacts{
+		color: white;
+		margin: 30px;
+	}
+}
+
+/*================
+   news page
+ ==================*/
+.news{
+	padding: 20px;
+	margin: 40px;
+	border: 1px solid $shadow;
+	border-radius:15px;
+	position: relative;
+	img{
+		max-width: 50%;
+		float: left;
+		margin: 10px 20px;
+		border: 3px solid $shadow;
+		border-radius:15px;
+	}
+	h1{
+		font-size: 3.2rem;
+		padding:20px 30px;
+	}
+	p{
+		margin-bottom: 20px;
+	}
+	.date{
+		position: absolute;
+		bottom:0;
+		right:0;
+		width: 200px;
+		height: 40px;
+		font-size: 2rem;
+		text-align: center;
+		padding: 10px 20px;
+		background-color: rgb(255,228,255);
+		border-radius: 0 0 15px 0;
+	}	
+}
+
+/*==================
+developers styles
+===================*/
+.developers{
+	
+	margin: 40px;
+	border: 1px solid $shadow;
+	border-radius:15px;
+	box-shadow: 0 0 30px 3px $shadow;
+	figure{
+		width: 30%;
+		float: left;
+		margin: 20px 40px 20px 40px;
+		
+		img{
+			max-width: 100%;
+			border-radius: 50%;
+
+		}
+	}
+
+	figcaption{
+		text-align: center;
+		display: block;
+		font-size: 3rem;
+		font-family: $writtenFont;
+		margin-top: 20px;
+	}
+	p{
+		
+		margin: 20px;
+		
+	}
+}
+
+
+
+
+
+/*================
+ leftIcons styles 
+ ==================*/
+ .social{
+ 	display: none;
+ }
+.leftIcons {
+	position:fixed;
+	left: -15px;
+
+	top: 30%;
+	height: 290px;
+	width: 65px;
+	background:linear-gradient(to right, rgba(0,100,0, 0.3), rgba(0,100,0 , 1));
+	border-radius: 0 20px 20px 0;
+	z-index: 1000;
+	img{
+		display: inline-block;
+		width: 40px;
+		margin: 5px 5px 5px 20px;
+		border-radius: 3px;
+		box-shadow: 2px 2px 5px rgba(0,0,0, .7);
+		&:hover{
+			box-shadow: -1.5px -1.5px 2px  rgba(0,0,0, .5);		
+		}
+	}
+	a:first-of-type img{
+		margin-top: 20px;
+	}
+}
+.fullGradient{
+	background-color: green;
+	background:linear-gradient(to right, rgba(0,100,0, 0.5), rgba(0,100,0 , 1));
+}
+
+
+
+ // для плагіна Paralax
+.parallax {
+  transition: background-position .2s ease-in;
+  
+}
+
+
+
+/*==================
+media styles
+===================*/
+
+@media  (min-width: 926px) and (max-width: 1200px) {
+	.container{
+		max-width: 760px;
+		
+	}
+	header nav{
+		margin-right: 5%;
+	}
+	
+	.articleList p {
+		padding: 0px 20px 20px 20px;
+		margin-top: -35px;
+	}
+	.footerNav a{
+		margin: 10px 0;
+	}
+
+}
+
+
+@media (min-width: 769px ) and (max-width: 925px)  {
+	.container{
+		max-width: 620px;	
+	}
+	html{
+		font-size: 50%;   // 8px 
+	}
+	header nav{
+		margin-right: 5%;
+	}
+	.mainnav a{
+		padding: 17px 15px;
+	}
+	.articleList p {
+		padding: 0px 20px 20px 20px;
+		margin-top: -35px;
+	}
+	.news{
+		img{
+			max-width: 100%;
+			float: none;
+			display: block;
+			margin: 0 auto;
+		}
+		h1{
+			padding-bottom: 0px;
+		}
+	}
+	.mainGallery #smallScreen a{
+		padding:5px;
+	}
+	.footerNav a{
+		margin: 10px 0;
+	}
+
+}
+
+@media (max-width: 768px) {   // для планшетів і смартфонів
+	.container{
+		width: 100%;	
+	}
+	html{
+		font-size: 45%;   
+	}
+	.headerRow{
+		position: static;
+		background: $bgStar ;
+	}
+	.headerRowPage{
+		background: $bgStar;
+	}
+	.logo{
+		display: block;
+		margin: 0;
+		text-align: center;
+		color: white;
+	}
+	header nav {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+.mainnav{                          // головна навігаційна панель
+		width: 90%;
+		margin: 0 auto;		
+
+	li{
+		width: 33.33%;
+
+		&:nth-of-type(n+4){
+			width: 50%;
+		}
+	}	
+	a{	
+		background-color: rgba(60,173,255, .3);
+		border: 1px solid $shadow;
+		border-radius: 3px;
+		padding:10px;
+		margin: 5px 10px;
+		box-shadow: 0 0 3px 3px $shadow;
+		color: white;
+		&:hover{
+			background: none;
+			background-color: rgba(60,173,255, .5);
+			transform: none;
+			box-shadow: 0 0 5px 5px $shadow;
+		}
+		&:active{
+			background-color: rgba(60,173,255, .5);
+			background: none;
+			transform: none;
+			box-shadow: 0 0 7px 7px $shadow;
+		}		
+	}
+}
+	
+	.bxslider a {              //розміри кнопки слайдера
+		left: 28%;
+		right: 28%;
+		bottom: 5%;
+		box-shadow: 0 0 25px black;
+		border-radius:15px;
+	}
+	.bxslider :nth-child(3) a {	
+		bottom: 67%;
+	}
+
+	.bxslider :nth-child(4) a {	
+		bottom: 16%;
+		left: 10%;
+		right: 45%;
+	}
+	p{
+		padding-left:20px;
+		padding-right:20px;
+	}
+
+.leftIcons {
+		position:static;
+		height: 100px;
+		width: 80%;
+		margin:0 auto;
+		background:none;
+		border: 3px dashed $shadow;
+		border-radius:20px;
+		z-index: 1000;
+	.social{
+		display: block;
+		font-size: 3rem;
+		font-family:$writtenFont;
+		text-align: center;
+		letter-spacing: 3px;
+	}
+	a{	
+		display: inline-block;
+		vertical-align: top;
+		width: 20%;
+		margin-top: 8px;
+	}
+	img{
+		display:block;
+		margin: 0 auto;
+		border-radius: 3px;
+		box-shadow: 0px 0px 15px 3px rgba(255,255,255, .7);
+		&:active,
+		&:hover{
+			box-shadow: 0px 0px 15px 5px $shadow;		
+		}
+	}
+
+	a:first-of-type img{
+		margin-top: 0;
+	}
+}
+	.news{				//  News
+		img{
+			max-width: 100%;
+			float: none;
+			display: block;
+			margin: 0 auto;
+		}
+		h1{
+			padding-bottom: 0px;
+		}
+	}
+	.fullGradient{                // забрати фон іконок соц мереж
+		background-color: none;
+	}
+
+	.footerNav{                   	
+
+	a{
+		padding:10px 0;
+		text-decoration: none;
+		font-size: 2.2rem;
+		letter-spacing: 3px;
+		box-shadow: 0px 0px 10px  $shadow;
+		border-radius:5px;
+			&:hover,
+			&:active{
+				box-shadow: 0px 0px 20px  $shadow;			
+			}
+		}
+	}
+.mainGallery{  
+		
+	#smallScreen a{   // відступи між скрінами в галереї
+					padding:5px 2px 5px 2px;
+				}
+	iframe{
+			width: 95%;
+			height: 350px;
+		}
+	.contacts{
+			text-align: left;
+			margin: 0;
+			padding: 15px 20px;
+		}
+}
+
+	
+.articleList {    
+  
+	img{
+		float: none;
+		max-width: 100%;
+		border-radius:5px;
+		border: 3px solid $shadow;
+		display: block;
+		margin: 10px auto;
+		box-shadow: 0 0 25px 10px $shadow; 
+	}
+	 h1{
+	 	text-align: center;
+	 	display: block;
+		border-radius: 5px;
+		width: 100%;
+		box-shadow: 0 0 25px 5px $shadow; 
+ 	}
+	
+}
+.developers{
+	
+	margin: 40px 20px;
+
+	figure{
+		width: 100%;
+		margin: 0px;
+		img{
+			max-width: 100%;
+			border-radius: 50%;
+			display: block;
+			margin: 10px auto;
+		}
+	}
+
+	figcaption{
+		margin-top: 30px;
+		margin-bottom: 20px;
+		font-size: 4rem;
+	}
+	p{
+		margin: 20px;
+		
+	}
+}
+
+
+.footerNav a{
+		margin: 10px 0;
+	}
+
+
+} //end 768px style
+
+@media (max-width: 480px) {
+.mainnav {
+	a{
+		margin: 5px;
+	}
+}
+
+.bxslider a {
+	position: absolute;
+	left: 18%;
+	right: 18%;
+	bottom: -7%;
+	box-shadow: none;
+	
+	&:active{
+		box-shadow: 0 0 45px black;
+		border-radius:15px;
+		transform: scale(1.05)
+	}
+}
+.bxslider :nth-child(3) a {	
+	bottom: 63%;
+}
+.bxslider :nth-child(4) a {	
+	bottom: -7%;
+	left: 0%;
+	right: 40%;
+}
+
+
+.leftIcons {
+		width: 100%;
+}
+	
+.news{
+	padding: 0px;
+	margin: 0px;
+	border:none;
+	border-bottom: 3px solid $shadow;
+	img{
+		margin-top: 10px;	
+	}
+	
+	p{
+		margin-bottom: 40px;
+	}
+
+}
+
+
+.footerNav{                   	
+	li{
+		width: 33.33%;
+	}
+	li:nth-of-type(n+4){
+		width: 50%;
+	}
+}
+
+.mainGallery{         //  стиль  для решти сторінок сайту
+	
+	#smallScreen a {
+		display: inline-block;
+		width: 50%;
+		padding:5px;
+	}
+	
+	#fullScreen{  
+		margin: 5px;
+		max-width: 100%;				
+	}
+	#fullScreen img{
+		width: 100%;
+	}
+	h1{
+		font-size: 5rem;
+		
+	}
+	p{
+		padding: 10px;
+	}
+	
+	.playMarket img {
+		width:80%;
+		&:active{
+			box-shadow: 0 0 35px $shadow;
+			border-radius:15px;	
+		}	
+	}
+	.contacts{
+			text-align: left;
+			text-indent: 15px;
+			margin: 0;
+			padding: 5px 3px;
+		
+		}
+	iframe{
+			height: 300px;
+		}
+	
+}	
+
+
+
+.developers{
+	margin: 10px;
+	
+	figure{
+	
+		img{
+			max-width: 90%;
+		}
+	}
+
+}
+
+.articleList {    
+	  
+	p{
+		padding:0 0 30px 0;
+	}
+	img{
+		width: 150px;
+	}
+	
+}
+
+}

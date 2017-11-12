@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>RO Games</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="jquery.bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>  
+	<script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+	<script src="Smooth-Parallax-Scrolling-Effect-With-jQuery-and-CSS3-SimpleParallax/simple.parallax.js"></script>
+	<script src="js/shadow.js"></script>
+
+	
+	
+	
+	
+
+		<script >
+
+			$(document).ready(function() {
+
+			$('.leftIcons').hide();	
+
+
+			$('.leftIcons a, .bxslider a').attr('target','_blank'); //  open new window for leftIcons, ref on play market
+		
+
+		if ( $(window).width() > 768) {
+			
+			var $header = $('.headerRow');
+
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 200 ) {
+					$header.css({
+						'background-color' : 'rgba(255,250,250, .95)'
+					});
+					 
+				} else if ($(this).scrollTop() < 200){
+					$header.css({
+						background : 'rgba(255,250,250, .4)'
+					});
+				}; //end of if-else	
+
+				});
+				// end of scroll 
+		    } // end of if 
+
+			$('.bxslider').bxSlider({   // слайдер
+				auto: true,
+				pause: 5000	,
+				autoHover: true
+			});
+
+			$('.parallax').sparallax();// паралакс скролл
+
+			
+		if ( $(window).width() > 768) {		
+			$(window).scroll(function() {
+				if ($(this).scrollTop() < 400) {
+					$('.leftIcons').hide(1000);
+
+				} else if ($ (this).scrollTop() > 400) {
+					$('.leftIcons').show(1000);
+				};
+			});//end of scroll
+		} else{
+			$('.leftIcons').show();
+		}
+
+
+			$('.leftIcons').hover(function() {
+					
+					$(this).stop().animate({
+						left:'-5px',
+					},
+					500,
+					'easeInQuad'
+					).addClass('fullGradient');//end 0f first animate
+				},
+				function() {
+					$(this).stop().animate({
+						left: '-15px'	
+					},600,
+					'easeOutBounce'
+					).removeClass('fullGradient');//end of two animate
+				});//end of mouse hover  ( Показати і сховати панель соціальних мереж )
+
+				
+
+	});  //end of ready
+		</script>
+	
+</head>
+<body>
+
+
+
+		
+		<header class="headerRow" >
+			
+			<h1 class="logo">logo</h1>
+			<nav>
+				<ul class="mainnav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="games.html">Games</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="developers.html">Developers</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+	
+	
+	<div>
+		<ul class="bxslider">
+				  <li>
+					  <img src="img/bt2.png">
+					  	<a href="https://play.google.com/store/apps/details?id=com.ROGame.BallTransformer2">
+					  		<img src="img/google-play.png" alt="google-play">
+					  	</a>
+				  </li>
+				  <li>
+				  		<img src="img/bt.png">
+				  		<a href="https://play.google.com/store/apps/details?id=com.ROGame.BallTransformer">
+				  			<img src="img/google-play.png" alt="google-play">
+				  		</a>
+
+				  </li>
+
+				  <li>
+				  <img src="img/find_it.png">
+				  <a href="https://play.google.com/store/apps/details?id=com.ROGame.FindIt">
+				  		<img src="img/google-play.png" alt="google-play">
+				  </a>
+				  </li>
+				  
+		</ul>
+	</div>
+
+
+
+	<section id="section-two">
+		<div class="container">
+			<p>Hi! We are a small group of students from Lviv which is developing mini games on the Android platform.
+			We create games using Unity and programming language C#.
+			All games are free and you can download it from Google Play.<br> Please rate our games, we will be happy to read your comments and remarks<br> About us<br>About us<br> About us<br>About us<br> About us</p>
+		</div>
+	</section>
+	
+	
+	<section class="parallax" id="section-three" data-parallax-speed="3">
+
+	<div class="container">
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+		
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+		
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+
+		<p>Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+		
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+		
+		<p >Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info</p>
+	</div>
+
+	</section>
+	
+	
+	
+
+	
+	<section  id="section-four">
+		<footer class="container">
+			<nav>
+				<ul class="footerNav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="games.html">Games</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="developers.html">Developers</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+			<p>RO Games 2017 &#0169;  All rights reserved </p>
+			<p>Ukraine,Lviv</p>
+
+			<div class="leftIcons" >
+				<span class="social">We in social networks</span><!--
+				--><a href="https://www.facebook.com/"><img src="img/facebook.png" alt="facebook"></a><!--
+				--><a href="#"><img src="img/vkontakte.png" alt="vkontakte"></a><!--
+				--><a href="#"><img src="img/twitter.png" alt="twitter"></a><!--
+				--><a href="#"><img src="img/google.png" alt="google"></a><!--
+				--><a href="#"><img src="img/youtube.png" alt="youtube"></a>
+			</div>
+			<p class="created">Webcite created by Taras Holovanych</p>
+		</footer>
+	</section>
+</body>
+</html>

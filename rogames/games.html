@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>RO Games</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="jquery.bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>  
+	<script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+	<script src="Smooth-Parallax-Scrolling-Effect-With-jQuery-and-CSS3-SimpleParallax/simple.parallax.js"></script>
+	<script src="js/shadow.js"></script>
+
+
+	
+	
+	
+	
+
+		<script >
+			$(document).ready(function() {
+				$('.leftIcons').hover(function() {
+					
+					$(this).stop().animate({
+						left:'0',
+					},
+					500,
+					'easeInQuad'
+					).addClass('fullGradient');//end 0f first animate
+				},
+				function() {
+					$(this).stop().animate({
+						left: '-17px'	
+					},600,
+					'easeOutBounce'
+					).removeClass('fullGradient');//end of two animate
+				});//end of mouse hover  ( Показати і сховати панель соціальних мереж )
+
+
+
+			$('.leftIcons a, .bxslider a').attr('target','_blank'); //  open new window for leftIcons, ref on play market
+
+			var $header = $('.headerRow');
+
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 200 ) {
+					$header.css({
+						'background-color' : 'rgba(255,250,250, .95)'
+					});
+					 
+				} else if ($(this).scrollTop() < 200){
+					$header.css({
+						background : 'rgba(255,250,250, .4)'
+					});
+				}; //end of if-else	
+
+				});
+				// end of scroll 
+		    
+
+			$('.bxslider').bxSlider({   // слайдер
+				auto: true,
+				pause: 5000	,
+				autoHover: true
+			});
+
+			$('.parallax').sparallax();  // паралакс скролл
+	
+                     // тільки для списків ігор, розробників..
+			$('.articleList div').each(function() {
+				$(this).hover(function() {
+					$(this).stop().animate({
+						backgroundPositionY: '0px', //   позиціонуєм фон
+						margin : '28px 0px'         // змінюєм відступи для ефекту збільшення розміру
+					},500)
+				},function() {
+					$(this).stop().animate({
+						backgroundPositionY : '-600px',
+						margin : '30px 10px'
+					})
+				});//end of hover
+			});//end each
+			$('.readMore').hide();
+			$('.articleList div').each(function() {
+				var showMore = $(this).find('.readMore');
+				var imgShadow = $(this).find('img');
+				var nameShadow = $(this).find('h1');
+				$(this).mouseover(function() {
+							
+					showMore.stop().fadeIn(500);
+					imgShadow.stop().animate({ boxShadow: '0 0 50px 10px rgb(75,0,130)'},500);
+					nameShadow.stop().animate({ boxShadow: '0 0 20px 5px rgb(75,0,130)'},500);
+				});
+				$(this).mouseout(function() {
+					showMore.stop().fadeOut(500);
+					imgShadow.stop().animate({ boxShadow: 'none'},400);
+					nameShadow.stop().animate({ boxShadow: 'none'},400);
+				});
+			});
+
+
+	});  //end of ready
+		</script>
+	
+</head>
+<body class="parallax bgOtherPage" data-parallax-speed="3">
+	
+		<header class="headerRowPage">
+			<h1 class="logo">logo</h1>
+			<nav>
+				<ul class="mainnav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="games.html">Games</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="developers.html">Developers</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	
+	<div class="articleList">		
+		<section class="container">
+			<a href="bt2.html">
+				<div>
+					<h1>Ball Transformer 2</h1>
+					<p class="readMore">Read more ...</p>
+					<img src="img/icons/bt2.png" alt="bt2">
+					
+					<p>
+					Ласкаво просимо в нову версію гри - Ball Transformer 2. Ваша головна мета полягає в тому, щоб пройти через всі рівні і досягти максимальної кількості балів. 
+					</p>
+				</div>
+			</a>
+			<a href="bt.html">
+				<div>
+					<h1>Ball Transformer</h1> 
+					<p class="readMore">Read more ...</p>
+					<img src="img/icons/bt1.png" alt="bt1">
+					<p>
+						Основна мета гри полягає в тому, щоб пройти всі рівні і досягти максимальної кількості балів. В міру проходження рівнів впроваджуються різноманітна кількість перешкод. 
+					</p>
+				</div>
+			</a>
+
+			<a href="fi.html">
+				<div>
+					<h1>Find It</h1>
+					<p class="readMore">Read more ...</p>
+					<img src="img/icons/find.png" alt="find_It">
+					<p>
+						Ви маєте 5 секунд, щоб знайти та натиснути на картинку, яка не схожа на інші.<br>
+						Покращіть свої реакцію та мислення!
+					</p>
+				</div>
+			</a>
+
+		<a href="fw.html">
+			<div>
+				<h1>Flappy World</h1>
+				<p class="readMore">Read more ...</p>
+				<img src="img/icons/flappy.png" alt="flappy">
+				
+				<p>
+					Flappy World проста гра, ви повинні уникати перешкоди, і летіти на стільки далеко, на скільки ви зможете.
+				</p>
+			</div>
+		</a>
+	</section>
+</div>
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	<div class="footerRowPage">
+		<footer class="container">
+			<nav>
+				<ul class="footerNav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="games.html">Games</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="developers.html">Developers</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<p>RO Games 2017 &#0169;  All rights reserved </p>
+			<p>Ukraine,Lviv</p>
+
+			<div class="leftIcons" >
+				<span class="social">We in social networks</span><!--
+				--><a href="https://www.facebook.com/"><img src="img/facebook.png" alt="facebook"></a><!--
+				--><a href="#"><img src="img/vkontakte.png" alt="vkontakte"></a><!--
+				--><a href="#"><img src="img/twitter.png" alt="twitter"></a><!--
+				--><a href="#"><img src="img/google.png" alt="google"></a><!--
+				--><a href="#"><img src="img/youtube.png" alt="youtube"></a>
+			</div>
+			<p class="created">Webcite created by Taras Holovanych</p>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+					
+				
