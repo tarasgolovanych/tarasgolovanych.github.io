@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Speadometer</title>
+	<style type="text/css">
+		.circle{
+			width: 400px;
+			height: 400px;
+			background: green;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		.center{
+			width: 40px;
+			height: 40px;
+			background: #fff;
+			border-radius: 50%;
+			margin-top: 180px;
+			margin-left: 180px;
+			position: relative;
+			box-shadow:  5px 5px 10px 0px #000; 
+			transform: rotate(-90deg);
+			
+		}
+
+		.arrow{
+			height: 0px;
+			width: 0px;
+			position: absolute;
+			border-right: 60px solid #fff;
+			border-top: 20px solid transparent;
+  			border-bottom: 20px solid transparent;
+			top: 0px;
+			right: 20px;
+			border-radius: 3px ;
+			z-index: 0;
+			
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="spead1 circle">
+		<div class="center">
+			<div class="arrow">
+				
+			</div>
+		</div>
+	</div>
+	
+
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+				/*=============
+				 	plugin for animation rotate 
+				 ==============*/
+			
+			$.fn.animateRotate = function(angle, duration, easing, complete) {
+			  var args = $.speed(duration, easing, complete);
+			  var step = args.step;
+			  return this.each(function(i, e) {
+			    args.complete = $.proxy(args.complete, e);
+			    args.step = function(now) {
+			      $.style(e, 'transform', 'rotate(' + now + 'deg)');
+			      if (step) return step.apply(e, arguments);
+			    };
+
+			    $({deg: -90}).animate({deg: angle}, args);
+			  });
+			};
+
+			$('.center').animateRotate(90,3000);
+
+
+		});
+	</script>
+</body>
+</html>
