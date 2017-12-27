@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Green marketing</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+					<div class="navbar main-menu">
+						
+						<div class="navbar-header">
+							
+							<a href="index.html" class="logo"><img src="img/logo.png" class="img-responsive" alt="logo"></a>
+
+
+						
+							<button type="button" class="navbar-toggle x collapsed" data-toggle='collapse' data-target="#mainMenu">
+								       
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+							</button>
+
+						</div>
+						<div class="social">
+								<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+								<a href="mailto:organicgreenmarceting@mail.com"><img src="img/email.png" alt="email"></a>
+								<img src="img/phone.png" alt="phone" class="phone-img">
+								<p>800-770-5542</p>
+							</div>
+						
+						<div class="navbar-main collapse navbar-collapse navbar-right" id="mainMenu">
+
+							<ul class="nav navbar-nav">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="automotive.html">Automotive <br>Direct Mail</a></li>
+								<li><a href="social.html">Social<br> Media Marketing</a></li>
+								<li><a href="secret.html">"Secret" <br> Promotion</a></li>
+								<li><a href="ups.html">UPS Direct<br> Mailer</a></li>
+								<li><a href="print.html">Print media</a></li>
+								<li><a href="reputation.html">Reputation<br> Marketing</a></li>
+								<li><a href="seo.html">SEO</a></li>
+								<li class="active-page"><a href="contact.html">Contact us</a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="home" style="background: url(img/bg/background-contact.jpg);background-size: cover;background-position: left center;">
+		<div class="container">
+			<div class="row">
+				<div class="main pages-main">
+					<div class="main-composition">
+						<h1>Contact us today</h1>
+						<a href="#" class="button">More Details<i class="fa fa-angle-right"></i></a>
+					</div>
+					<img src="img/chameleon.png" class="img-responsive main-composition-img" alt="chameleon">
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="form-section">
+		<div class="container">
+			<div class="row">
+				
+				<div class="form-section">
+					<h2>You can see more green</h2>
+						<form id="main-form" class="main-form">
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="Organic Green Marketing">
+							<input type="hidden" name="admin_email" value="tarasgolovanush@gmail.com">
+							<input type="hidden" name="form_subject" value="Main contact form">
+							<!-- END Hidden Required Fields -->
+							<div class="col-md-6 col-form">
+								<label for="email">E-mail</label>
+								<input type="email" name="email" placeholder="You E-mail..." id="email" required>
+							</div>
+							
+							<div class="col-md-6 col-form">
+								<label for="phone">Phone</label>
+								<input type="tel" name="phone" id="phone" required >
+							</div>
+							
+							<div class="col-md-6 col-form">
+								<label for="name">First name</label>
+								<input type="text" name="name" id="name" placeholder="You name..." required>
+							</div>
+							
+							<div class="col-md-6 col-form">
+								<label for="surname">Last name</label>
+								<input type="text" name="surname" placeholder="You surname..." required><br>
+							</div>
+							<div class="col-md-12 textarea-col">
+								<label for="letter">Your cover letter or answer</label>
+								<textarea name="letter" id="letter" placeholder="Your cover latter" required></textarea>
+							</div>
+							
+
+							<button class="button">Submit</button>
+						</form>
+						<div class="succes">
+							<p>Thanks for you appeal !</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 footer-logo-wrap">
+					<img src="img/logo.png" alt="logo" class="img-responsive footer-logo">
+				</div>
+				<div class="col-md-5 col-md-offset-4 footer-social-wrap">
+					<ul class="footer-social">
+						<li>
+							<img src="img/phone.png" alt="phone" class="phone-img">
+							<p>800-770-5542</p>
+						</li>
+						<li>
+							<a href="mailto:organicgreenmarceting@mail.com"><img src="img/email.png" alt="email"> organicgreenmarceting@mail.com</a>
+						</li>
+						<li>
+							<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+	<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$('.main .button').click(function() {
+				$("html, body").animate({ scrollTop: $('.form-section').offset().top }, 1000);
+			});
+	
+
+	$("#phone").intlTelInput({
+	  initialCountry: "auto",
+	  nationalMode: false,
+	  autoHideDialCode: false,
+	  geoIpLookup: function(callback) {
+	    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+	      var countryCode = (resp && resp.country) ? resp.country : "";
+	      callback(countryCode);
+	    });
+	  }
+	});
+
+
+	document.getElementById("phone").onkeydown = function(e){
+		if((e.which >=48 && e.which <=57)  // num
+			|| (e.which >=96 && e.which <=105)  // num lock
+			|| e.which==8 // backspace
+			|| (e.which >=37 && e.which <=40) // 
+		   || e.which==46) // delete 
+		{
+		    return true;
+		} else {
+		    return false;            
+		}		 
+		}
+					
+
+	//E-mail Ajax Send
+	$("#main-form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			$('.succes').css('display','flex').hide().fadeIn();
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+				$('.succes').fadeOut();
+			}, 3000);
+		});
+		return false;
+	});
+
+
+});
+
+		
+	</script>
+</body>
+</html>
