@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page buttons</title>
+	  <meta property="og:title" content="My shared title" />
+	  <meta property="og:description" content="Description of shared article" />
+	  <meta property="og:url" content="https://myurl.com" />
+	  <meta property="og:image" content="https://tarasgolovanych.github.io/buttonsLibania/logo.png" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+	<div class="container">
+		<img src="logo.png" class="logo">
+		<div class="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+	<div class="share-buttons">
+		<div class="linkedIn"><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://testbutton222.000webhostapp.com&title=LinkedIn%20Developer%20Network
+		&summary=My%20favorite%20developer%20program&source=LinkedIn" onclick="window.open(this.href, 'mywin',
+	'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">IMAGE</a></div>
+
+		<a href="#" onclick="share_fb('https://tarasgolovanych.github.io/buttonsLibania/');return false;" rel="nofollow" share_url="https://tarasgolovanych.github.io/buttonsLibania/" target="_blank">
+		    Share
+		</a>
+	</div>
+
+	<div class="follow"> 
+			<div class="facebook-follow">
+				<div class="linkedInFollow">
+					<script src="http://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+					<script type="IN/FollowCompany" data-id="11461920" data-counter="top"></script>
+				</div>
+				<div class="fb-like" data-href="https://www.facebook.com/Test-242085336331939/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+			</div>
+	</div>
+
+	<script src="jquery.min.js"></script>
+	<script >
+		function share_fb(url) {
+	  window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+	}
+	</script>
+		<script>$(document).ready(function() {
+		//	$('button._2tga').css('display','none');
+		});</script>
+</body>
+</html>
