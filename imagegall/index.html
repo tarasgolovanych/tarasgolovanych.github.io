@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <!-- Fotorama CSS plugin -->
+    <link rel="stylesheet" type="text/css" href="fotorama/fotorama.css">
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="custom.css">
+
+    <title>Gallery</title>
+  </head>
+  <body>
+    <section>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-12">
+    				<h2>Full width  Bootstrap</h2>
+	    			<div style="width: 100%;" class="gallery">
+					  <img src="main.jpg" data-caption="First Image">
+					  <img src="main2.jpg" data-caption="Image two <br><span>Underline text</span>">
+					  <img src="main3.jpg" data-caption="Third caption">
+					</div>
+    			</div>
+    			
+    		</div>
+    		<div class="row">
+    			<div class="col-md-6">
+    						<h2>col-md-6 Bootstrap</h2>
+    					<div style="width: 100%;" class="gallery">
+						  <img src="main.jpg" data-caption="First Image">
+						  <img src="main2.jpg" data-caption="Image two <br><span>Underline text</span>">
+						  <img src="main3.jpg" data-caption="Third caption">
+						</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first,  then Bootstrap JS -->
+	
+    <script src="jquery/dist/jquery.min.js"></script>
+   <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+
+	
+
+
+    <script src="fotorama/fotorama.js"></script>
+    <script>
+    	$(function () {
+		  $('.gallery').fotorama({
+		  	'allowfullscreen' :"true",
+		  	'width': '100%'
+		  });
+
+		});
+    </script>
+
+  </body>
+</html>
