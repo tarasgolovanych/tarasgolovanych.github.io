@@ -1,0 +1,115 @@
+.gallery img{
+	width: 100% !important;
+	left:0 !important;
+	right: 0 !important;
+}
+.fotorama--fullscreen img{
+	width: auto !important;
+	margin: 0 auto;
+}
+.fotorama__stage__frame{
+	display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.fotorama__caption{
+	margin: auto;
+	position: relative;
+	
+}
+.fotorama__caption__wrap{
+	background: rgba(255,255,255, .8);
+	box-shadow: 5px 5px 10px rgba(255,255,255, .5);
+	padding: 20px 30px;
+	border-radius: 20px;
+	font-size: 14px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+.fotorama__caption__wrap span{
+	font-size: 12px;
+}
+.fotorama__arr--next{
+	background: none;
+	 margin-top: -30px;
+}
+.fotorama__arr--next::before{
+	color: #fff;
+	display: inline-block;
+    font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 700; 
+	font-size: 40px;
+	content: "\f105";
+    text-align: center;
+    
+}
+.fotorama__arr--prev{
+	background: none;
+	margin-top: -30px;
+    margin-left: 10px;
+}
+.fotorama__arr--prev::before{
+	color: #fff;
+	display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 700; 
+    font-size: 40px;
+    content: "\f104";
+    text-align: center;
+    
+}
+
+
+
+
+@media (min-width: 576px) { 
+    .fotorama__caption__wrap{
+        font-size: 22px;
+    }
+
+}
+
+
+@media (min-width: 768px) { 
+    .fotorama__caption__wrap{
+        font-size: 24px;
+    }
+    .fotorama__caption__wrap span{
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .fotorama__caption__wrap{
+        font-size: 26px;
+    }
+    .fotorama__caption__wrap span{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .fotorama__caption__wrap{
+        font-size: 34px;
+    }
+    .fotorama__caption__wrap span{
+        font-size: 22px;
+    }
+}
+
+/*Hide caption for scrren <= 320px*/
+@media (max-width: 320px) { 
+    .fotorama__caption{
+        display: none;
+    }
+}
