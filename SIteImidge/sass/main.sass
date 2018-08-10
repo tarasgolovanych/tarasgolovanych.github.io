@@ -1,0 +1,143 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+
+.container 
+	max-width: 860px
+	margin: auto 
+	padding: 0 10px
+p 
+	font-size: 14px
+	font-family: "Times New Roman",sans-serif
+	color: rgb(141, 141, 141)
+	line-height: 1.429
+	text-align: left
+section 
+	h3 
+		font-size: 18px
+		font-family: "Tahoma",sans-serif
+		color: #000
+		font-weight: bold
+		line-height: 1.056
+		margin-bottom: 5px
+
+
+
+
+.main-header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+.logo-wrap
+	max-width: 100px
+.main-navigation
+	display: inline-block
+	ul
+		padding: 0
+		margin: 0
+		li 
+			list-style-type: none
+			display: inline-block
+			padding: 0
+			a 
+				text-align: center
+				font-family: Tahoma, sans-serif
+				font-weight: bold
+				font-size: 16px
+				color: #000000
+				text-decoration: none
+				padding: 20px 10px
+				display: block
+				&:hover 
+					color: #dadada
+.navigation-button
+	width: 45px 
+	height: 45px 
+	position: absolute
+	top: 8px 
+	right: 8px
+	display: none
+	cursor: pointer
+	span 
+		width: 45px 
+		height: 3px 
+		background: #000
+		display: block
+		margin: 9px 0
+		border-radius: 3px
+		position: relative
+		transition: all .5s ease
+		bottom: 0 
+		right: 0
+.active-button
+	span 
+		&:nth-child(1)
+			transform: rotate(45deg)
+			bottom: -11px
+		&:nth-child(2)
+			right: 30px 
+			opacity: 0
+		&:nth-child(3)
+			transform: rotate(-45deg)
+			bottom: 12px
+.menu-active
+	display: block !important
+.main-section
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 14px
+	background: #f0f0f0
+	padding: 20px 20px
+
+.main-section-content
+	h2 
+		font-size: 21px
+		font-family: "Tahoma", sans-serif
+		color: rgb(0, 0, 0)
+		font-weight: bold
+		line-height: 1.33
+		text-align: left
+		margin: 0
+	.main-section-button 
+		background-color: #da4137
+		color: #fefefe
+		font-size: 13px
+		font-family: "Tahoma",sans-serif
+		color: rgb(254, 254, 254)
+		padding: 5px 20px 
+		background-image: linear-gradient( 180deg, rgba(255,255,255, .1) 0%, rgba(0,0,0,0) 100%)
+		border-radius: 2px 
+		text-decoration: none
+		&:hover 
+			background-color: darken( #da4137, 8%)
+
+.content-strategy-advantages
+	display: grid 
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 14px
+	.advantage-item
+		display: grid 
+		grid-template-columns: 1fr 3fr
+		align-items: center
+		grid-gap: 10px
+		padding: 0px 10px
+		.advantage-item-descr 
+			font-size: 14px
+			font-family: "Times New Roman",sans-serif
+			color: #000
+			font-style: italic
+			line-height: 1.286
+			text-align: left
+
+
+
+		
+
+
+
+
+
+@import "media" // Всегда в конце
