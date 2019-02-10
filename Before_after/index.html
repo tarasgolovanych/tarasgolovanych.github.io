@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Before After Slider</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<main>
+		<section id="before-after-section">
+			<div class="left-col">
+					<div class="before-after-slider-wrap">
+						<div class="before-after-box" style="z-index: 1000;">
+							<div class="before-image inner-image" style="background-image: url(img/b-1.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-1.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-2.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-2.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-3.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-3.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-4.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-4.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-5.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-5.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="before-after-descr">
+						<div class="before-after-descr-wrap property">
+							<p>Property Name Property Name </p>
+						</div>
+						<div class="before-after-descr-wrap location">
+							<p>Location Property Name Property Name </p>
+						</div>
+					</div>
+			
+
+			</div>
+			<div class="right-col">
+				<div class="before-after-main-descr">
+					<div>
+						<p>Dolor ipsum lorem dolor lor dolor ips dolor ip. Dolor ipsum lorem dolor lor dolor ips dolor ip . Dolor ipsum lorem dolor lor dolor ips dolor ip .</p>
+						<p>Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. </p>
+					</div>
+				</div>
+				<div class="before-after-nav">
+					<div class="nav-item" style="background-image: url(img/a-1.jpg);"></div>
+					<div class="nav-item" style="background-image: url(img/a-2.jpg);"></div>
+					<div class="nav-item" style="background-image: url(img/a-3.jpg);"></div>
+					<!--<div class="nav-item" style="background-image: url(img/a-4.jpg);"></div>
+					<div class="nav-item" style="background-image: url(img/a-5.jpg);"></div>-->
+				</div>
+			</div>
+			<div class="hidden-">
+				
+			</div>
+		</section>
+
+	</main>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".before-after-box").beforeAfter();
+			
+		});
+
+
+		
+	</script> 
+</body>
+</html>
