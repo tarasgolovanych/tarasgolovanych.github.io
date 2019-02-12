@@ -5,14 +5,19 @@
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Raleway:400,700" rel="stylesheet">
+	<link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<main>
 		<section id="before-after-section">
-			<div class="left-col">
+			<div class="before-after-slider">
+				<div class="left-col">
 					<div class="before-after-slider-wrap">
-						<div class="before-after-box" style="z-index: 1000;">
+						<div class="before-after-box current" style="z-index: 100;" >
 							<div class="before-image inner-image" style="background-image: url(img/b-1.jpg);">
 								<span>BEFORE</span>
 							</div>
@@ -52,52 +57,496 @@
 								<span>AFTER</span>
 							</div>
 						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-6.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-6.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-7.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-7.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-8.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-8.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+
 					</div>
 
 					<div class="before-after-descr">
 						<div class="before-after-descr-wrap property">
-							<p>Property Name Property Name </p>
+							<p>Aston Martin</p>
 						</div>
 						<div class="before-after-descr-wrap location">
-							<p>Location Property Name Property Name </p>
+							<div class="loc-wrap">
+								<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+								<p> Gaydon, Warwickshire, England, United Kingdom </p>
+							</div>
 						</div>
 					</div>
-			
-
-			</div>
+				</div>
 			<div class="right-col">
 				<div class="before-after-main-descr">
-					<div>
-						<p>Dolor ipsum lorem dolor lor dolor ips dolor ip. Dolor ipsum lorem dolor lor dolor ips dolor ip . Dolor ipsum lorem dolor lor dolor ips dolor ip .</p>
-						<p>Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. </p>
+					<div class="plaintext">
+						<p>Aston Martin Lagonda Global Holdings plc is a British independent manufacturer of luxury sports cars and grand tourers. It was founded in 1913 by Lionel Martin and Robert Bamford.</p>
+						<p>Steered from 1947 by David Brown, it became associated with expensive grand touring cars in the 1950s and 1960s, and with the fictional character James Bond following his use of a DB5 model in the 1964 film Goldfinger. Their sports cars are regarded as a British cultural icon.</p>
 					</div>
 				</div>
+				
+				
+
 				<div class="before-after-nav">
-					<div class="nav-item" style="background-image: url(img/a-1.jpg);"></div>
-					<div class="nav-item" style="background-image: url(img/a-2.jpg);"></div>
-					<div class="nav-item" style="background-image: url(img/a-3.jpg);"></div>
-					<!--<div class="nav-item" style="background-image: url(img/a-4.jpg);"></div>
-					<div class="nav-item" style="background-image: url(img/a-5.jpg);"></div>-->
+					<div class="nav-right" name="arrow-dropright"></div>
+					<div class="nav-left" name="arrow-dropleft"></div>
+			
+
+					<div class="before-after-nav-wrap">
+						<div class="nav-item current" data-index='1' style="background-image: url(img/a-1.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Aston Martin</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Gaydon, Warwickshire, England, United Kingdom </p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Aston Martin Lagonda Global Holdings plc is a British independent manufacturer of luxury sports cars and grand tourers. It was founded in 1913 by Lionel Martin and Robert Bamford.</p>
+										<p>Steered from 1947 by David Brown, it became associated with expensive grand touring cars in the 1950s and 1960s, and with the fictional character James Bond following his use of a DB5 model in the 1964 film Goldfinger. Their sports cars are regarded as a British cultural icon.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='2' style="background-image: url(img/a-2.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Olimpiyskiy National Stadium </p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>Kyiv, Ukraine </p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>The Olympic National Sports Complex is a multi-use sports and recreation facility in Kiev, Ukraine, located on the slopes of the city's central Cherepanova Hora (Cherepanov Hill), Pechersk Raion. </p>
+										<p>The stadium is the premier sports venue in Ukraine. It hosted the final of Euro 2012 and the 2018 UEFA Champions League Final.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='3' style="background-image: url(img/a-3.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Guardians of the Galaxy </p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Galaxy </p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Guardians of the Galaxy is a 2014 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.</p>
+										<p>It is the tenth film in the Marvel Cinematic Universe (MCU). The film was directed by James Gunn</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='4' style="background-image: url(img/a-4.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Game of Thrones</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Westeros</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones.</p>
+										<p>It is filmed in Belfast and elsewhere in Northern Ireland, Canada, Croatia, Iceland, Malta, Morocco, Scotland, Spain, and the United States.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='5' style="background-image: url(img/a-5.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Dogs</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>Ukraine, Lviv Oblast, Lviv</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ac tellus sed porta. Ut fermentum, ligula ac euismod mattis, odio dui pharetra urna, sit amet lacinia turpis nisi id magna. Maecenas quis condimentum augue.</p>
+										<p>Fusce erat dui, tristique id fermentum et, iaculis in sem. Ut dignissim libero neque, at commodo enim fringilla vitae. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='6' style="background-image: url(img/a-6.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>The Lord of the Rings</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>Middle-earth</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>The Lord of the Rings is a film series of three epic fantasy adventure films directed by Peter Jackson, based on the novel The Lord of the Rings by J. R. R. Tolkien.</p>
+										<p>The trilogy was one of the biggest and most ambitious film projects ever undertaken, with a reported budget of $281–330 million. The three films were shot simultaneously and entirely in Jackson's native New Zealand.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='7' style="background-image: url(img/a-7.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>The Avengers</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>New York City</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p> Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='8' style="background-image: url(img/a-8.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Martian </p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Mars, Solar System</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Dolor ipsum lorem dolor lor dolor ips dolor ip. Dolor ipsum lorem dolor lor dolor ips dolor ip . Dolor ipsum lorem dolor lor dolor ips dolor ip .</p>
+										<p>Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="hidden-">
+		</div>
+		</section>
+
+		<section id="before-after-section">
+			<div class="before-after-slider">
+				<div class="left-col">
+					<div class="before-after-slider-wrap">
+						<div class="before-after-box current" style="z-index: 100;" >
+							<div class="before-image inner-image" style="background-image: url(img/b-1.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-1.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-2.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-2.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-3.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-3.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-4.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-4.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-5.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-5.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-6.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-6.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-7.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-7.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+						<div class="before-after-box">
+							<div class="before-image inner-image" style="background-image: url(img/b-8.jpg);">
+								<span>BEFORE</span>
+							</div>
+							<div class="after-image inner-image" style="background-image: url(img/a-8.jpg);">
+								<span>AFTER</span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="before-after-descr">
+						<div class="before-after-descr-wrap property">
+							<p>Aston Martin</p>
+						</div>
+						<div class="before-after-descr-wrap location">
+							<div class="loc-wrap">
+								<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+								<p> Gaydon, Warwickshire, England, United Kingdom </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="right-col">
+				<div class="before-after-main-descr">
+					<div class="plaintext">
+						<p>Aston Martin Lagonda Global Holdings plc is a British independent manufacturer of luxury sports cars and grand tourers. It was founded in 1913 by Lionel Martin and Robert Bamford.</p>
+						<p>Steered from 1947 by David Brown, it became associated with expensive grand touring cars in the 1950s and 1960s, and with the fictional character James Bond following his use of a DB5 model in the 1964 film Goldfinger. Their sports cars are regarded as a British cultural icon.</p>
+					</div>
+				</div>
 				
+				
+
+				<div class="before-after-nav">
+					<div class="nav-right" name="arrow-dropright"></div>
+					<div class="nav-left" name="arrow-dropleft"></div>
+			
+
+					<div class="before-after-nav-wrap">
+						<div class="nav-item current" data-index='1' style="background-image: url(img/a-1.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Aston Martin</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Gaydon, Warwickshire, England, United Kingdom </p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Aston Martin Lagonda Global Holdings plc is a British independent manufacturer of luxury sports cars and grand tourers. It was founded in 1913 by Lionel Martin and Robert Bamford.</p>
+										<p>Steered from 1947 by David Brown, it became associated with expensive grand touring cars in the 1950s and 1960s, and with the fictional character James Bond following his use of a DB5 model in the 1964 film Goldfinger. Their sports cars are regarded as a British cultural icon.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='2' style="background-image: url(img/a-2.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Olimpiyskiy National Stadium </p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>Kyiv, Ukraine </p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>The Olympic National Sports Complex is a multi-use sports and recreation facility in Kiev, Ukraine, located on the slopes of the city's central Cherepanova Hora (Cherepanov Hill), Pechersk Raion. </p>
+										<p>The stadium is the premier sports venue in Ukraine. It hosted the final of Euro 2012 and the 2018 UEFA Champions League Final.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='3' style="background-image: url(img/a-3.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Guardians of the Galaxy </p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Galaxy </p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Guardians of the Galaxy is a 2014 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.</p>
+										<p>It is the tenth film in the Marvel Cinematic Universe (MCU). The film was directed by James Gunn</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='4' style="background-image: url(img/a-4.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Game of Thrones</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Westeros</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones.</p>
+										<p>It is filmed in Belfast and elsewhere in Northern Ireland, Canada, Croatia, Iceland, Malta, Morocco, Scotland, Spain, and the United States.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='5' style="background-image: url(img/a-5.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Dogs</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>Ukraine, Lviv Oblast, Lviv</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ac tellus sed porta. Ut fermentum, ligula ac euismod mattis, odio dui pharetra urna, sit amet lacinia turpis nisi id magna. Maecenas quis condimentum augue.</p>
+										<p>Fusce erat dui, tristique id fermentum et, iaculis in sem. Ut dignissim libero neque, at commodo enim fringilla vitae. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='6' style="background-image: url(img/a-6.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>The Lord of the Rings</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>Middle-earth</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>The Lord of the Rings is a film series of three epic fantasy adventure films directed by Peter Jackson, based on the novel The Lord of the Rings by J. R. R. Tolkien.</p>
+										<p>The trilogy was one of the biggest and most ambitious film projects ever undertaken, with a reported budget of $281–330 million. The three films were shot simultaneously and entirely in Jackson's native New Zealand.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='7' style="background-image: url(img/a-7.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>The Avengers</p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p>New York City</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p> Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-item" data-index='8' style="background-image: url(img/a-8.jpg);">
+							<div class="open-bg"><span>Open</span></div>
+							<div class="hidden-cont">
+								<div class="property">
+									<p>Martian </p>
+								</div>
+								<div class="location">
+									<div class="loc-wrap">
+										<div class="img-box"><ion-icon name="pin"></ion-icon></div>
+										<p> Mars, Solar System</p>
+									</div>
+								</div>
+								<div class="main-descr">
+									<div class="plaintext">
+										<p>Dolor ipsum lorem dolor lor dolor ips dolor ip. Dolor ipsum lorem dolor lor dolor ips dolor ip . Dolor ipsum lorem dolor lor dolor ips dolor ip .</p>
+										<p>Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. Dolor ipsum lorem. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div>
 		</section>
 
 	</main>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.event.move.js"></script>
-	<script src="js/jquery.twentytwenty.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".before-after-box").beforeAfter();
-			
-		});
+	<script src="js/hammer.js"></script>
+	<script src="js/main.js"></script>
 
-
-		
-	</script> 
 </body>
 </html>
