@@ -155,7 +155,6 @@ body {
 
 .before-after-descr{
 	display: flex;
-	min-height: 10vh; 
 	background: #2A4D23;
 }
 
@@ -168,6 +167,7 @@ body {
 
 .before-after-descr-wrap.property,
 .before-after-descr-wrap.location{
+	min-height: 10vh; 
 	padding: 15px 20px;
 	text-align: center;
 	text-transform: uppercase;
@@ -181,7 +181,14 @@ body {
 }
 .before-after-descr-wrap.location .loc-wrap .img-box {
 	padding-right: 20px;
-	line-height: 90%;
+}
+
+.loc-wrap .img-box svg {
+	height: 30px;
+	width: 30px;
+}
+.loc-wrap .img-box svg path{
+	fill: #fff;
 }
 
 
@@ -266,26 +273,31 @@ body {
 .before-after-nav .nav-left,
 .before-after-nav .nav-right{
 	position: absolute;
-	top: calc(50% - 20px); 
+	top: calc(50% - 15px); 
 	z-index: 1000;
-	width: 20px;
-	height: 40px;
-	background: #2A4D23;
+	height: 30px;
 	cursor: pointer;
 	transition: .3s ease;
+	font-size: 30px;
 }
 
 .before-after-nav .nav-right{
 	right: 5%;
-	-webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
-	clip-path: polygon(0 0, 0% 100%, 100% 50%);
+	/*-webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);*/
+	clip: rect(0 0, 0 30px, 30px  15px );
 }
 
 .before-after-nav .nav-left{
 	left: 5%;
-	-webkit-clip-path: polygon( 100% 0, 100% 100%, 0% 50%);
-	clip-path: polygon(100% 0, 100% 100%, 0% 50%);
+
 }
+.before-after-nav .nav-left svg,
+.before-after-nav .nav-right svg {
+	height: 30px;
+	fill: #2A4D23;
+}
+
+
 
 .before-after-nav .nav-left:hover,
 .before-after-nav .nav-right:hover{
